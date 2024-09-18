@@ -196,7 +196,7 @@ namespace cauldron
         g_pFrameworkInstance = static_cast<Framework*>(this);
 
         // Initialize the logger (crucial to pickup any init errors)
-        CauldronAssert(ASSERT_CRITICAL, Log::InitLogSystem(L"Cauldron.log") >= 0, L"Failed to initialize log system. Make sure folder is not write-protected or drive is full.");
+        //CauldronAssert(ASSERT_CRITICAL, Log::InitLogSystem(L"Cauldron.log") >= 0, L"Failed to initialize log system. Make sure folder is not write-protected or drive is full.");
 
         // Initialize the task manager (necessary to do any background loading we might request)
         m_pTaskManager = new TaskManager();

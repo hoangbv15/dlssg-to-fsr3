@@ -161,13 +161,13 @@ namespace cauldron
     int Log::InitLogSystem(const wchar_t* filename)
     {
         // Create an instance of the log system if non already exists
-        if (s_pLogInstance == nullptr)
-        {
-            s_pLogInstance = new Log(filename);
-            CauldronAssert(ASSERT_ERROR, s_pLogInstance != nullptr, L"Unable to create the Logger");
-            if (s_pLogInstance != nullptr)
-                return 0;
-        }
+        // if (s_pLogInstance == nullptr)
+        // {
+        //     s_pLogInstance = new Log(filename);
+        //     CauldronAssert(ASSERT_ERROR, s_pLogInstance != nullptr, L"Unable to create the Logger");
+        //     if (s_pLogInstance != nullptr)
+        //         return 0;
+        // }
 
         // Something went wrong
         // Hack to enable the game to run even if logs cannot be written to file
