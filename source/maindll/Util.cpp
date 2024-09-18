@@ -39,17 +39,17 @@ namespace Util
 	{
 		static bool once = []()
 		{
-			const auto fullPath = GetThisDllPath() + L"\\dlssg_to_fsr3.log";
-			char convertedPath[2048] = {};
+			// const auto fullPath = GetThisDllPath() + L"\\dlssg_to_fsr3.log";
+			// char convertedPath[2048] = {};
 
-			if (wcstombs_s(nullptr, convertedPath, fullPath.c_str(), std::size(convertedPath)) == 0)
-			{
-				auto logger = spdlog::basic_logger_mt("file_logger", convertedPath, true);
-				logger->set_level(spdlog::level::level_enum::trace);
-				logger->set_pattern("[%H:%M:%S] [%l] %v"); // [HH:MM:SS] [Level] Message
-				logger->flush_on(logger->level());
-				spdlog::set_default_logger(std::move(logger));
-			}
+			// if (wcstombs_s(nullptr, convertedPath, fullPath.c_str(), std::size(convertedPath)) == 0)
+			// {
+			// 	auto logger = spdlog::basic_logger_mt("file_logger", convertedPath, true);
+			// 	logger->set_level(spdlog::level::level_enum::trace);
+			// 	logger->set_pattern("[%H:%M:%S] [%l] %v"); // [HH:MM:SS] [Level] Message
+			// 	logger->flush_on(logger->level());
+			// 	spdlog::set_default_logger(std::move(logger));
+			// }
 
 			return true;
 		}();
