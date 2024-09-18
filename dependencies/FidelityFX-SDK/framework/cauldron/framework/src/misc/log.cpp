@@ -170,7 +170,9 @@ namespace cauldron
         }
 
         // Something went wrong
-        return -1;
+        // Hack to enable the game to run even if logs cannot be written to file
+        // No point in writing logs if everything is working perfectly fine.
+        return 0;
     }
 
     int Log::TerminateLogSystem()
